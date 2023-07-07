@@ -1,0 +1,5 @@
+export const SEARCH_SUGGESTION='https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='
+export const API_KEY='AIzaSyBenU8uwEtUQLGs0ZbuI9Tv4aQv8zBbZiI'
+export const YOUTUBE_API='https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='
+export const YOUTUBE_WATCH_API='https://www.youtube.com/watch?v='
+export const YOUTUBE_VIDEO_DATA='https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=Ks-_Mh1QhMc&key='
