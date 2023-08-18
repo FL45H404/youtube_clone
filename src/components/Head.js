@@ -41,7 +41,7 @@ const Head = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png"
           alt="menu"
         />
-        <Link to='/'>
+        <Link to='/' onClick={()=>dispatch(addQuery(''))}>
         <img className="h-8 mx-2 cursor-pointer" src={YOUTUBE_LOGO} alt="youtube-logo" />
         </Link>
       </div>

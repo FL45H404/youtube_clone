@@ -16,20 +16,20 @@ Body
     videoContainer
     VideoCard
 */
-const appRouter=createBrowserRouter([{
-  path:'/',
-  element:<Body/>,
-  children:[
-  {
-    path:'/',
-    element:<MainContainer/>
-  },
-  {
-    path:'/watch',
-    element:<WatchList/>
-  }
-  ]
-}])
+// const appRouter=createBrowserRouter([{
+//   path:'/',
+//   element:<Body/>,
+//   children:[
+//   {
+//     path:'/',
+//     element:<MainContainer/>
+//   },
+//   {
+//     path:'/watch',
+//     element:<WatchList/>
+//   }
+//   ]
+// }])
 
 function App() {
   return (
