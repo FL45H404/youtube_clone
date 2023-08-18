@@ -30,12 +30,13 @@ const MainContainer = () => {
     }
   },[searchQuery,setVideos])
   
-  if (videos.length===0) return <Shimmer/>
+  // if (!videos) return <Shimmer/>
   return (
     <div className='w-full p-5 mt-16 '>
       <ButtonList />
-      {/* {videos && searchQuery ? <VideoQueryContainer info={videos}/> :  <VideoContainer info={videos}/>} */}
-      {videos && <VideoContainer info={videos}/>}    
+      {videos.length===0 ? (<Shimmer/>) : 
+       <VideoContainer info={videos}/> }
+          
     </div>
   )
 }
