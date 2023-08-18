@@ -5,7 +5,7 @@ const Related = ({info}) => {
   return (<>
     {info.map((item)=>{
         return (
-        <div className='my-2 hover:shadow-md w-full'>
+        <div className='my-2 hover:shadow-md w-full' key={item.id}>
             <Link to={'/watch?v='+item.id}>
             <div className='flex flex-row'>
                 <div className='p-2 rounded-lg'>

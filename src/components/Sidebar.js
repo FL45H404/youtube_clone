@@ -9,9 +9,9 @@ const Sidebar = () => {
   const dispatch=useDispatch()
   if (isShowing) return null
   return (
-    <div className='p-5 mt-16 shadow-lg w-48 h-screen fixed overflow-hidden overflow-y-auto bg-white left-0 border border-r'>
+    <div className='p-5 mt-16 shadow-lg w-48 h-screen fixed overflow-hidden overflow-y-auto bg-white left-0 border border-r' onClick={()=>dispatch(closeMenu())}>
       <ul>
-      <Link to='/' ><li className='cursor-pointer border-b p-1 hover:bg-gray-300' onClick={()=>dispatch(closeMenu())}>Home</li></Link>
+      <Link to='/' ><li className='cursor-pointer border-b p-1 hover:bg-gray-300' onClick={()=>dispatch(addQuery(''))}> Home</li></Link>
       <Link to='/' ><li className='cursor-pointer border-b p-1 hover:bg-gray-300' onClick={()=>dispatch(addQuery('shorts'))}>Shorts</li></Link>
       <Link to='/' ><li className='cursor-pointer border-b p-1 hover:bg-gray-300' onClick={()=>dispatch(addQuery('videos'))}>Videos</li></Link>
       <Link to='/' ><li className='cursor-pointer border-b p-1 hover:bg-gray-300' onClick={()=>dispatch(addQuery('live'))}>Live</li></Link>

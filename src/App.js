@@ -1,7 +1,7 @@
 import './App.css';
 import Head from './components/Head';
 import Body from './components/Body'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter,BrowserRouter,Routes,Route } from 'react-router-dom';
 import MainContainer from './components/MainContainer';
 import WatchList from './components/WatchList';
 
@@ -34,9 +34,18 @@ const appRouter=createBrowserRouter([{
 function App() {
   return (
     <div>
-    <RouterProvider router={appRouter}>
-    <Head/>
-    </RouterProvider>
+    {/* <RouterProvider router={appRouter}> */}
+    <BrowserRouter> 
+      <Head />
+        <Routes>
+          <Route exact path='/' element={<Body/>}>
+            <Route index element={<MainContainer/>}/>
+            <Route path='watch' element={<WatchList/>}/>
+          </Route>
+        </Routes>
+    </BrowserRouter>
+
+    {/* </RouterProvider> */}
     </div>
   );
 }
