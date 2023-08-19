@@ -18,7 +18,7 @@ const WatchList = () => {
   // useEffect(()=>{
   //     fetchData()
   // },[])
-  const videoData = useData();
+  const [videoData,param] = useData();
   // setVideoData(data)
 
   if (!videoData) return null;
@@ -30,12 +30,12 @@ const WatchList = () => {
             controls
             width="100%"
             height="500px"
-            url={YOUTUBE_WATCH_API + searchParams.get("v")}
+            url={YOUTUBE_WATCH_API + param}
           />
         </div>
         <VideoDetails videoData={videoData} />
         <div className="m-5">
-          <CommentData id={searchParams.get("v")} />
+          <CommentData id={param} />
         </div>
       </div>
       <div className="mt-4 flex-none ">

@@ -3,9 +3,10 @@ import { useDispatch } from "react-redux";
 import { toggleMenu } from "../features/menuSlice";
 import { SEARCH_SUGGESTION, YOUTUBE_LOGO } from "../utils";
 import { addQuery } from "../features/searchSlice";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Head = () => {
+  const navigate=useNavigate()
   const dispatch = useDispatch();
   const [searchText, setSearchText] = useState("");
   const [searchData, setSearchData] = useState([]);
@@ -24,10 +25,12 @@ const Head = () => {
       clearTimeout(timer);
     };
   }, [searchText]);
+
   const submitText = (e) => {
     e.preventDefault();
     dispatch(addQuery(searchText));
     setShowSuggetion(false);
+    navigate('/')
     setSearchText("");
   };
   return (
@@ -71,6 +74,7 @@ const Head = () => {
                     setSearchText("");
                     dispatch(addQuery(item));
                     setShowSuggetion(false);
+                    navigate('/')
                   }}
                   className="cursor-pointer border-b p-2 shadow-sm hover:bg-gray-200"
                 >
