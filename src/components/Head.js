@@ -34,7 +34,7 @@ const Head = () => {
     <div className="fixed flex justify-around p-2 pt-4 shadow-lg w-full z-20 bg-white md:grid grid-flow-col ">
       <div className="flex col-span-1">
         <img
-          className="h-8 cursor-pointer"
+          className="h-8 cursor-pointer menu-logo"
           onClick={() => {
             togglemenu();
           }}

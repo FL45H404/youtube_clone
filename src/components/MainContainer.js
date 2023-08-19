@@ -28,7 +28,6 @@ const MainContainer = () => {
   //###################################################
 
   useEffect(() => {
-    dispatch(clearVideos());
     // setVideos([])
     if (searchQuery) {
       // fetchData()
@@ -36,6 +35,10 @@ const MainContainer = () => {
     } else {
       dispatch(fetchVideo());
       // fetchDataWithQuery()
+    }
+
+    return ()=>{
+      dispatch(clearVideos())
     }
   }, [searchQuery]);
 

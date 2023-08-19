@@ -42,6 +42,7 @@ function App() {
             <Route index element={<MainContainer/>}/>
             <Route path='watch' element={<WatchList/>}/>
           </Route>
+          <Route path='*' element={<h1 className='text-center mt-5'> 404-Page Not Found.</h1>}/>
         </Routes>
     </BrowserRouter>
 
