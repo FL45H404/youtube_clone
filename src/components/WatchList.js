@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
-import { API_KEY, YOUTUBE_WATCH_API } from "../utils";
+import { API_KEY, YOUTUBE_WATCH_API } from "../helper/utils";
 import VideoDetails from "./VideoDetails";
 import CommentData from "./CommentData";
 import RelatedVideo from "./RelatedVideo";
-import { useData } from "./useData";
+import { useData } from "../helper/useData";
+import { useSearchParams,useLocation } from "react-router-dom";
 const WatchList = () => {
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const param = new URLSearchParams(location.search).get('v');
   // const [videoData,setVideoData]=useState()
 
   // const fetchData=async()=>{
@@ -18,7 +19,7 @@ const WatchList = () => {
   // useEffect(()=>{
   //     fetchData()
   // },[])
-  const [videoData,param] = useData();
+  const videoData = useData(param);
   // setVideoData(data)
 
   if (!videoData) return null;

@@ -1,5 +1,5 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import {YOUTUBE_API,API_KEY} from '../utils'
+import {YOUTUBE_API,API_KEY} from '../helper/utils'
 export const fetchVideo=createAsyncThunk('video/fetchVideo',async()=>{
     try{
         const res=await fetch(YOUTUBE_API+API_KEY)

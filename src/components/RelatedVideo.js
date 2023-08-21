@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { API_KEY, YOUTUBE_API } from '../utils'
+import { API_KEY, YOUTUBE_API } from '../helper/utils'
 import Related from './Related'
 
 const RelatedVideo = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../features/menuSlice";
-import { SEARCH_SUGGESTION, YOUTUBE_LOGO } from "../utils";
+import { SEARCH_SUGGESTION, YOUTUBE_LOGO } from "../helper/utils";
 import { addQuery } from "../features/searchSlice";
 import { Link,useNavigate } from "react-router-dom";
 

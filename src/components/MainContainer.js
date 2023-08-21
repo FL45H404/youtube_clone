@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ButtonList from "./ButtonList";
 import VideoContainer from "./VideoContainer";
-import { API_KEY, YOUTUBE_API } from "../utils";
 import { useDispatch, useSelector } from "react-redux";
 import Shimmer from "./Shimmer";
 import {
@@ -14,6 +13,7 @@ const MainContainer = () => {
   const searchQuery = useSelector((state) => state.search.searchQuery);
   const videos = useSelector((state) => state.video.videos);
   const dispatch = useDispatch();
+  ////////////////////////////////////
   // const fetchData=async()=>{
   //   const res=await fetch(YOUTUBE_API+API_KEY)
   //   const data=await res.json()
@@ -28,13 +28,10 @@ const MainContainer = () => {
   //###################################################
 
   useEffect(() => {
-    // setVideos([])
     if (searchQuery) {
-      // fetchData()
       dispatch(fetchVideoWithQuery(searchQuery));
     } else {
       dispatch(fetchVideo());
-      // fetchDataWithQuery()
     }
 
     return ()=>{

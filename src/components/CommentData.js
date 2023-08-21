@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { API_KEY } from '../utils'
+import React, { useEffect, useState } from 'react'
+import { API_KEY } from '../helper/utils'
 import Comment from './Comment'
 
 const CommentData = ({id}) => {
@@ -10,9 +10,9 @@ const fetchComment=async()=>{
     const data=await res.json()
     setComment(data.items)
 }
-useState(()=>{
+useEffect(()=>{
     fetchComment()
-},[])
+},[id])
   return (
     <div>
         <div className='font-bold '>

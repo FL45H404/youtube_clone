@@ -8,6 +8,14 @@ const Sidebar = () => {
   const isShowing=useSelector((state)=>state.menu.isMenuOpen)
   const dispatch=useDispatch()
   if (isShowing) return null
+
+  //handlemenu for delegation
+//   const handleMenu=(e)=>{
+//     if(e.target.nodeName==='LI'){
+//       dispatch(addQuery(e.target.innerText.toLowerCase()))
+//   }
+//   dispatch(closeMenu())
+// }
   return (
     <div className='p-5 mt-16 shadow-lg w-48 h-screen fixed overflow-hidden overflow-y-auto bg-white left-0 border border-r' onClick={()=>dispatch(closeMenu())}>
       <ul>

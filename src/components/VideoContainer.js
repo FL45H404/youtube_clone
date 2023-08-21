@@ -6,7 +6,7 @@ const VideoContainer = ({info}) => {
   return (
     <div className='flex flex-wrap justify-between'>
     {
-      info.map((item)=> <VideoCard key={item.id} info={item}/>)
+      info.map((item)=> <VideoCard key={item.id.videoId ? item.id.videoId : item.id} info={item}/>)
     }
     </div>
   )
