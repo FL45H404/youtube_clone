@@ -57,7 +57,6 @@ const Head = () => {
             className="relative border border-gray-400 p-2 rounded-l-full w-full md:w-1/2 "
             type="text"
             value={searchText}
-            onBlur={()=>setShowSuggetion(false)}
             onFocus={() => setShowSuggetion(true)}
             onChange={(e) => setSearchText(e.target.value)}
           />
