@@ -1,3 +1,19 @@
+
+## My Youtube
+### [Demo Link:-](https://harmonious-gnome-13c44a.netlify.app/ "Demo Link")
+- SPA webapplication with nested routes.
+- Added ReduxJs Toolkit for state management.
+- CreateAsyncThunk as middleware for data fetching.
+- Added debouncing to limit the rate API calls.
+- ErrorBoundary for application.
+- Created custom hook for dynamic data fetching.
+- EventBubbling for nav container.
+### Preview-
+![image](https://github.com/FL45H404/youtube_clone/assets/70277710/50d64872-b8d2-44fb-b379-244d49bbbfd3)
+![image](https://github.com/FL45H404/youtube_clone/assets/70277710/ff366756-e0c3-4ae6-b637-749e7efb0bcb)
+![image](https://github.com/FL45H404/youtube_clone/assets/70277710/d5d18ee8-e6b6-4941-b730-f2770d608bac)
+![image](https://github.com/FL45H404/youtube_clone/assets/70277710/e69dc794-a22c-41c6-9b93-0158261edd49)
+### Editor.md
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
